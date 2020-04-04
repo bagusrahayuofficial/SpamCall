@@ -7,8 +7,10 @@ C = '\033[1;36m'
 W = '\033[1;37m'
 A = '\033[90m'
 
+from requests.exceptions import ConnectionError
+from cookielib import LWPCookieJar as Cookie
 from time import sleep
-import platform, os
+import platform, requests, random, sys, os
 
 if platform.system() == 'Linux':
 	clear = 'clear'
@@ -18,34 +20,6 @@ elif platform.system() == 'Windows':
 
 else:
 	pass
-
-
-try:
-	from requests.exceptions import ConnectionError
-	from cookielib import LWPCookieJar as Cookie
-	import requests, random, sys
-		
-except ImportError:
-	os.system(clear)
-	print(C+'Module Belum Terinstall'+W+' ...')
-	print(C+'Install'+W+' ...')
-	print
-	os.system('pip2 install requests')
-	print
-	print(W+'Module Berhasil Di Install'+C+ ' ^_^')
-	sleep(3)
-	os.system('python2 '+__file__)
-
-except ModuleNotFoundError:
-	os.system(clear)
-	print(W+'Module Belum Terinstall'+C+' ...')
-	print(W+'Install'+C+' ...')
-	print
-	os.system('pip2 install requests')
-	print
-	print(W+'Module Berhasil Di Install'+C+ ' ^_^')
-	sleep(3)
-	os.system('python2 '+__file__)
 	
 def banner():
 	os.system(clear)

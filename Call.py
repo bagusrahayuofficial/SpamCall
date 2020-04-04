@@ -8,21 +8,22 @@ W = '\033[1;37m'
 A = '\033[90m'
 
 from time import sleep
-import os
+import platform, os
+
+if platform.system() == 'Linux':
+	clear = 'clear'
+	
+elif platform.system() == 'Windows':
+	clear = 'cls'
+
+else:
+	pass
+
 
 try:
 	from requests.exceptions import ConnectionError
 	from cookielib import LWPCookieJar as Cookie
-	import platform, requests, random, sys
-
-	if platform.system() == 'Linux':
-		clear = 'clear'
-	
-	elif platform.system() == 'Windows':
-		clear = 'cls'
-
-	else:
-		pass
+	import requests, random, sys
 		
 except ImportError:
 	os.system(clear)

@@ -7,11 +7,13 @@ C = '\033[1;36m'
 W = '\033[1;37m'
 A = '\033[90m'
 
+from time import sleep
+import os
+
 try:
 	from requests.exceptions import ConnectionError
 	from cookielib import LWPCookieJar as Cookie
-	from time import sleep
-	import platform, requests, random, sys, os
+	import platform, requests, random, sys
 
 	if platform.system() == 'Linux':
 		clear = 'clear'

@@ -1,3 +1,10 @@
+#!/usr/bin/python2
+# Author : ./FUKUR0-3XP
+# Team : Black Coders Anonymous Satanic Exploiter Team ( BCA - X666X )
+# Apa Liat Liat ? Mau Recode ? >_<
+# Belajar Boleh, Asalkan Jangan Recode Yak >_<
+# Recode Tidak Akan Membuat Anda Menjadi Pencipta Kode :3
+
 M = '\033[1;31m'
 H = '\033[1;32m'
 K = '\033[1;33m'

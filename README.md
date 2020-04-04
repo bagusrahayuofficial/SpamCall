@@ -65,7 +65,7 @@ Creator : ./FUKUR0-3XP
 
 Team : Black Coders Anonymous Satanic Exploiter Team
 
-Instagram : ricko.3xp_
+Instagram : ricko.net_
 
 Email : fukur0.internet@gmail.com
 

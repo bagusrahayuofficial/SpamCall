@@ -14,7 +14,8 @@ Kode Ini Diciptakan Untuk Mengeprank Temen Kalian Saat Mabar 🤣
 
 Inggris : 
 
-Kode Ini Diciptakan Agar Teman Anda Kesal Saat Bermain Game 🤣
+```
+This Code Was Created So That Your Friends Are Upset When Playing Games 🤣
 
 ```
 

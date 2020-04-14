@@ -226,7 +226,6 @@ def main():
 				
 				else:
 					print(W+'['+C+'*'+W+'] KIRIM SPAM KE NOMOR '+C+str(phone)+W+' GAGAL'+M+' \xE2\x9C\x96')
-					import pdb;pdb.set_trace()
 					Cookies.save()
 					
 		elif pilih == '4':

